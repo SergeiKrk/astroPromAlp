@@ -6,12 +6,6 @@ export type Feature = {
   title: string;
 };
 
-export type Intro = {
-  title: string;
-  subtitle: string;
-  image: string[];
-};
-
 export type Button = {
   enable: boolean;
   label: string;

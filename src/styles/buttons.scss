@@ -13,3 +13,9 @@
 .btn-outline-primary {
   @apply border-dark bg-transparent text-dark no-underline hover:bg-dark hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark;
 }
+.gradientBgBtn {
+  @apply mt-8 flex w-full justify-center rounded-full py-2.5 text-sm font-semibold leading-6 text-white shadow-sm;
+  @apply bg-gradient-to-br from-sky-700 to-teal-700;
+  @apply hover:bg-gradient-to-br hover:from-teal-600 hover:to-sky-600;
+  @apply focus:animate-ping focus:bg-gradient-to-br focus:from-sky-300 focus:to-teal-300;
+}

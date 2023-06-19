@@ -9,17 +9,6 @@ banner:
     label: "Get Started For Free"
     link: "https://github.com/zeon-studio/astroplate"
 
-# Intro
-intro:
-  title: "Высотные работы"
-  subtitle: "Мы квалифицированные специалисты и имеем лицензию для работ на высоте."
-  contenet: "Выполняем все виды услуг промышленного альпинизма и высотных работ:"
-  image:
-    - "/images/intro/pokraska-fasada.jpg"
-    - "/images/intro/ochistka-krysh-ot-sosulek.jpg"
-    - "/images/intro/Remont-fasadov-1.jpg"
-    - "/images/intro/germetizaciya-shvov.jpg"
-
 # Features
 features:
   - title: "What's Included in Astroplate"
