@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
 import config from "@/config/config.json";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
@@ -21,7 +21,7 @@ const currentServices = sortedServices.slice(
         {
           currentServices.map((service) => (
             <div class="mb-14 md:col-4">
-              <BlogCard data={service} />
+              <ServiceCard data={service} />
             </div>
           ))
         }
