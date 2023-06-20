@@ -4,6 +4,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
 import Intro from "@/partials/Intro.astro";
+import Services from "./services/index.astro";
 import type { Button, Feature } from "@/types";
 import { Image } from "@astrojs/image/components";
 import { getEntryBySlug } from "astro:content";
@@ -28,6 +29,7 @@ const { banner, features }: Homepage = homepage.data;
 
 <Base>
   <Intro intro={intro} />
+  <Services />
   <!-- Banner -->
   <section class="section pt-14">
     <div class="container">

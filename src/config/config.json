@@ -22,6 +22,16 @@
     "blog_folder": "blog"
   },
 
+  "settingsServices": {
+    "search": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 10,
+    "summary_length": 200,
+    "services_folder": "services"
+  },
+
   "params": {
     "contact_form_action": "#",
     "copyright": "Дизайн и разработка [AstroPages](https://kryukovs.ru)"

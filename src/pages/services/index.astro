@@ -1,0 +1,32 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+
+const { services_folder } = config.settingsServices;
+const services = await getSinglePage(services_folder);
+const sortedServices = sortByDate(services);
+const currentServices = sortedServices.slice(
+  0,
+  config.settingsServices.pagination
+);
+---
+
+<section class="section">
+  <div class="container">
+    <div class="row gx-5">
+      <!-- blog posts -->
+      <div class="row">
+        {
+          currentServices.map((service) => (
+            <div class="mb-14 md:col-4">
+              <BlogCard data={service} />
+            </div>
+          ))
+        }
+      </div>
+      <!-- sidebar -->
+    </div>
+  </div>
+</section>
