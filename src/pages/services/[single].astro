@@ -5,19 +5,19 @@ import PostSingle from "@/layouts/PostSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 
 export async function getStaticPaths() {
-  const posts = await getSinglePage(config.settings.blog_folder);
+  const services = await getSinglePage(config.settingsServices.services_folder);
 
-  const paths = posts.map((post) => ({
+  const paths = services.map((service) => ({
     params: {
-      single: post.slug,
+      single: service.slug,
     },
-    props: { post },
+    props: { service },
   }));
   return paths;
 }
 
-const { post } = Astro.props;
-const { title, meta_title, description, image } = post.data;
+const { service } = Astro.props;
+const { title, meta_title, description, image } = service.data;
 ---
 
 <Base
@@ -26,5 +26,5 @@ const { title, meta_title, description, image } = post.data;
   description={description}
   image={image}
 >
-  <PostSingle post={post} />
+  <PostSingle post={service} />
 </Base>
