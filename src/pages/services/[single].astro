@@ -1,7 +1,7 @@
 ---
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import PostSingle from "@/layouts/PostSingle.astro";
+import ServiceSingle from "@/layouts/ServiceSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 
 export async function getStaticPaths() {
@@ -26,5 +26,5 @@ const { title, meta_title, description, image } = service.data;
   description={description}
   image={image}
 >
-  <PostSingle post={service} />
+  <ServiceSingle post={service} />
 </Base>
