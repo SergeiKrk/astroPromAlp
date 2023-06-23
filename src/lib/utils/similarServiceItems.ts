@@ -1,16 +1,20 @@
 // similer products
 const similarServiceItems = (currentItem: any, allItems: any, slug: string) => {
-  let tags: string[] = [];
+  let categories: string[] = [];
 
-  // set tags
-  if (currentItem.data.tags.length > 0) {
-    tags = currentItem.data.tags;
+  // set categories
+  if (currentItem.data.categories.length > 0) {
+    categories = currentItem.data.categories;
   }
 
-  // filter by tags
-  const filterByTags = allItems.filter((item: { data: { tags: string } }) =>
-    tags.find((tag) => item.data.tags.includes(tag))
+  // filter by categories
+  const filterByCategories = allItems.filter(
+    (item: { data: { categories: string } }) =>
+      categories.find((category) => item.data.categories.includes(category))
   );
+
+  // merged after filter
+  const mergedItems = [...new Set([...filterByCategories])];
 
   // filter by slug
   const filterBySlug = mergedItems.filter((product) => product.slug !== slug);

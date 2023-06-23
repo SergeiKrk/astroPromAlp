@@ -2,18 +2,17 @@
 import ServiceCard from "@/components/ServiceCard.astro";
 import Share from "@/components/Share.astro";
 import config from "@/config/config.json";
-import Disqus from "@/function-components/Disqus";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import similerItems from "@/lib/utils/similarItems";
+import similarServiceItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "@astrojs/image/components";
 
 const { services_folder } = config.settingsServices;
 const services = await getSinglePage(services_folder);
 const { service } = Astro.props;
-const similarServices = similerItems(service, services, service.slug);
+const similarServices = similarServiceItems(service, services, service.slug);
 const { Content } = await service.render();
-const { title, description, image, tags } = service.data;
+const { title, description, image, categories } = service.data;
 ---
 
 <section class="section pt-7">
@@ -39,16 +38,16 @@ const { title, description, image, tags } = service.data;
         </div>
         <div class="row items-start justify-between">
           <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
-            <h5 class="mr-3">Tags :</h5>
+            <h5 class="mr-3">Направления:</h5>
             <ul>
               {
-                tags.map((tag: string) => (
+                categories.map((category: string) => (
                   <li class="inline-block">
                     <a
                       class="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark"
-                      href={`/tags/${slugify(tag)}`}
+                      href={`/categories/${slugify(category)}`}
                     >
-                      {humanize(tag)}
+                      {humanize(category)}
                     </a>
                   </li>
                 ))
@@ -65,13 +64,12 @@ const { title, description, image, tags } = service.data;
             />
           </div>
         </div>
-        <Disqus className="mt-20" client:load />
       </article>
     </div>
 
     <!-- Related posts -->
     <div class="section pb-0">
-      <h2 class="h3 mb-12 text-center">Related Posts</h2>
+      <h2 class="h3 mb-12 text-center">Другие услуги</h2>
       <div class="row justify-center">
         {
           similarServices.map((service) => (

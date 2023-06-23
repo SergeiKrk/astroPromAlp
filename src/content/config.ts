@@ -15,6 +15,22 @@ const blogCollection = defineCollection({
   }),
 });
 
+// Service collection schema
+const serviceCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string().optional(),
+    descript: z.string().optional(),
+    image: z.string().optional(),
+    icon: z.string().optional(),
+    price: z.string().optional(),
+    categories: z.array(z.string()).default(["others"]),
+    tags: z.array(z.string()).default(["others"]),
+    draft: z.boolean().optional(),
+  }),
+});
+
 // Author collection schema
 const authorsCollection = defineCollection({
   schema: z.object({
@@ -48,6 +64,7 @@ const pagesCollection = defineCollection({
 // Export collections
 export const collections = {
   blog: blogCollection,
+  services: serviceCollection,
   authors: authorsCollection,
   pages: pagesCollection,
 };
