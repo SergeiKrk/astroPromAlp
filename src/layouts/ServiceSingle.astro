@@ -8,12 +8,12 @@ import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "@astrojs/image/components";
 
-const { blog_folder } = config.settings;
-const posts = await getSinglePage(blog_folder);
-const { post } = Astro.props;
-const similarPosts = similerItems(post, posts, post.slug);
-const { Content } = await post.render();
-const { title, description, image, tags } = post.data;
+const { services_folder } = config.settingsServices;
+const services = await getSinglePage(services_folder);
+const { service } = Astro.props;
+const similarServices = similerItems(service, services, service.slug);
+const { Content } = await service.render();
+const { title, description, image, tags } = service.data;
 ---
 
 <section class="section pt-7">
@@ -61,7 +61,7 @@ const { title, description, image, tags } = post.data;
               className="social-icons"
               title={title}
               description={description}
-              slug={post.slug}
+              slug={service.slug}
             />
           </div>
         </div>
@@ -74,9 +74,9 @@ const { title, description, image, tags } = post.data;
       <h2 class="h3 mb-12 text-center">Related Posts</h2>
       <div class="row justify-center">
         {
-          similarPosts.map((post) => (
+          similarServices.map((service) => (
             <div class="lg:col-4">
-              <ServiceCard data={post} />
+              <ServiceCard data={service} />
             </div>
           ))
         }
