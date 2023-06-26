@@ -23,15 +23,13 @@ const currentServices = sortedServices.slice(
   <div class="container">
     <div class="row gx-5">
       <!-- blog posts -->
-      <div class="row">
-        {
-          currentServices.map((service) => (
-            <div class="mb-14 md:col-4">
-              <ServiceCard data={service} />
-            </div>
-          ))
-        }
-      </div>
+      {
+        currentServices.map((service) => (
+          <div class="mb-14 md:col-4">
+            <ServiceCard data={service} />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

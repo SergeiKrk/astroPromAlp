@@ -6,7 +6,7 @@ description: "Ремонт, гидроизоляция, герметизация
 image: "/images/image-placeholder.png"
 icon: "ri:layout-right-fill"
 price: "от 250"
-categories: ["Application", "Data"]
+categories: ["Фасад", "Утепление"]
 draft: false
 ---
 
