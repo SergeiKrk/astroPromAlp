@@ -6,26 +6,27 @@ const { testimonial } = Astro.props;
 
 {
   testimonial.data.enable && (
-    <section class="section">
-      <div class="container">
+    <section class="section scroll-mt-24 " id="testimonials">
+      <div class="container px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <div class="row">
           <div class="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
-            <h2 set:html={markdownify(testimonial.data.title)} class="mb-4" />
-            <p set:html={markdownify(testimonial.data.description)} />
+            <h2
+              set:html={markdownify(testimonial.data.title)}
+              class="gradientText text-center text-5xl font-extrabold tracking-tight"
+            />
+            <p
+              class="my-8 text-2xl font-extrabold"
+              set:html={markdownify(testimonial.data.description)}
+            />
           </div>
           <div class="col-12">
             <div class="swiper testimonial-slider">
               <div class="swiper-wrapper">
                 {testimonial.data.testimonials.map(
-                  (item: {
-                    avatar: string;
-                    content: string;
-                    name: string;
-                    designation: string;
-                  }) => (
+                  (item: { avatar: string; content: string; name: string }) => (
                     <div class="swiper-slide">
                       <div class="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
-                        <div class="text-dark dark:text-white">
+                        <div class="text-cyan-700 dark:text-white">
                           <svg
                             width="33"
                             height="20"
@@ -43,7 +44,7 @@ const { testimonial } = Astro.props;
                           class="mt-8"
                           set:html={markdownify(item.content)}
                         />
-                        <div class="mt-11 flex items-center">
+                        <div class="mt-6 flex items-center">
                           <div class="text-dark dark:text-white">
                             <Image
                               height={50}
