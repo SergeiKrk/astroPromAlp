@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Такелажные работы"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Монтаж оборудования, подъем грузов и..."
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "mdi:elevator-up"
+price: "от 85 (за 1 кг.)"
 categories: ["c", "Data"]
 draft: false
 ---

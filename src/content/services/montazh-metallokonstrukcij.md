@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Монтаж металлоконструкций"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Фермы, мачты, газходы. Изготовление и..."
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "mdi:tower-fire"
+price: "от 18 500"
 categories: ["c", "Data"]
 draft: false
 ---

@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Кровельные работы"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Наплавляемая кровля, скатная кровля"
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "map:roofing-contractor"
+price: "от 540"
 categories: ["c", "Data"]
 draft: false
 ---

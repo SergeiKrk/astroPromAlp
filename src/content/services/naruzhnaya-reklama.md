@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Наружная реклама"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Монтаж баннеров, рекламных конструкций"
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "mdi:billboard"
+price: "от 150"
 categories: ["c", "Data"]
 draft: false
 ---

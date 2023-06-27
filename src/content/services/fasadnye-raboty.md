@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Фасадные работы"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Покраска, штукатурка, гидрофобизация"
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "tabler:building-community"
+price: "от 70"
 categories: ["c", "Data"]
 draft: false
 ---

@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Мойка фасадов зданий"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Фасады и витражи. Окна и балконы"
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "entypo:bucket"
+price: "от 70"
 categories: ["c", "Data"]
 draft: false
 ---

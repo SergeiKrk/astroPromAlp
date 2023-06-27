@@ -1,33 +1,25 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Главная",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "О нас",
       "url": "/about"
     },
     {
-      "name": "Elements",
+      "name": "Элементы",
       "url": "/elements"
     },
     {
-      "name": "Pages",
+      "name": "Услуги",
       "url": "",
       "hasChildren": true,
       "children": [
         {
           "name": "Contact",
           "url": "/contact"
-        },
-        {
-          "name": "Blog",
-          "url": "/blog"
-        },
-        {
-          "name": "Authors",
-          "url": "/authors"
         },
         {
           "name": "Categories",

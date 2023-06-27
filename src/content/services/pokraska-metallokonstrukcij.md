@@ -1,11 +1,11 @@
 ---
-title: "Утепление стен снаружи"
+title: "Покраска металлоконструкций"
 meta_title: ""
-descript: "Наружное утепление стен пеноплексом"
+descript: "Фермы, АМС, ЛЭП, резервуары и т.п."
 description: "в Ульяновске вы можете заказать по тел.: +7 937 275 83 13"
 image: "/images/image-placeholder.png"
-icon: "mdi:animation"
-price: "от 825"
+icon: "ri:paint-brush-fill"
+price: "от 80"
 categories: ["c", "Data"]
 draft: false
 ---

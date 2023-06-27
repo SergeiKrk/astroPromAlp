@@ -27,7 +27,7 @@
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 10,
+    "pagination": 12,
     "summary_length": 200,
     "services_folder": "services"
   },
