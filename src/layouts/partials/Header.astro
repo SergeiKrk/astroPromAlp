@@ -22,7 +22,7 @@ const { navigation_button, settings } = config;
 const { pathname } = Astro.url;
 ---
 
-<header class={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
+<header id="page-header" class={`header z-30 ${settings.sticky_header && "absolute"}`}>
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
@@ -149,3 +149,19 @@ const { pathname } = Astro.url;
     </div>
   </nav>
 </header>
+
+<script>
+  const header = document.querySelector("#page-header") as HTMLElement;
+  const page = document.documentElement;
+
+  document.addEventListener("scroll", () => {
+    const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+    header.classList.toggle("fixed-header", d < 0);
+  });
+</script>
+
+<style>
+  .fixed-header {
+    @apply fixed bottom-auto top-0 bg-body;
+  }
+</style>

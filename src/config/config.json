@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "Astroplate",
+    "title": "ПромАльпВысота",
     "base_url": "https://astroplate.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo-darkmode.png",
-    "logo_width": "150",
-    "logo_height": "30",
-    "logo_text": "Astroplate"
+    "logo_width": "50",
+    "logo_height": "50",
+    "logo_text": "ПромАльпВысота"
   },
 
   "settings": {
@@ -50,7 +50,7 @@
   },
 
   "metadata": {
-    "meta_author": "zeon.studio",
+    "meta_author": "@SergeiKrk",
     "meta_image": "/images/og-image.png",
     "meta_description": "astro and tailwind boilerplate"
   }
