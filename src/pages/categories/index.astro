@@ -4,6 +4,7 @@ import Base from "@/layouts/Base.astro";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader.astro";
+import Header from "../../layouts/partials/Header.astro";
 
 const { blog_folder }: { blog_folder: string } = config.settings;
 const categories = await getTaxonomy(blog_folder, "categories");
@@ -11,6 +12,7 @@ const allCategories = await getAllTaxonomy(blog_folder, "categories");
 ---
 
 <Base title={"Categories"}>
+  <Header />
   <PageHeader title={"Categories"} />
   <section class="section">
     <div class="container text-center">

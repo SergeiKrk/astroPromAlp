@@ -176,3 +176,9 @@
   @apply bg-clip-text text-transparent;
   @apply bg-gradient-to-br from-sky-700 via-cyan-700 to-teal-700;
 }
+
+.gradientBgNimb {
+  @apply rounded-full bg-gradient-to-tr from-sky-700 to-teal-600 p-1;
+  @apply hover:bg-gradient-to-tr hover:from-teal-500 hover:to-sky-500;
+  @apply focus:ring-1 focus:ring-teal-500;
+}

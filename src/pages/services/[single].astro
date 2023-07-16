@@ -1,6 +1,7 @@
 ---
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
+import Header from "../../layouts/partials/Header.astro"
 import ServiceSingle from "@/layouts/ServiceSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 
@@ -26,5 +27,6 @@ const { title, meta_title, description, image } = service.data;
   description={description}
   image={image}
 >
+  <Header/>
   <ServiceSingle service={service} />
 </Base>

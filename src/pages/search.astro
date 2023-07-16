@@ -3,6 +3,7 @@ import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import Search from "@/layouts/Search";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import Header from "../layouts/partials/Header.astro";
 
 const { blog_folder } = config.settings;
 
@@ -18,5 +19,6 @@ const searchList = posts.map((item) => ({
 ---
 
 <Base title={`Search`}>
+  <Header />
   <Search client:load searchList={searchList} />
 </Base>

@@ -3,6 +3,7 @@ import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getEntryBySlug } from "astro:content";
+import Header from "../layouts/partials/Header.astro";
 
 const entry = await getEntryBySlug("pages", "contact");
 const { contact_form_action }: { contact_form_action: string } = config.params;
@@ -15,6 +16,7 @@ const { title, description, meta_title, image } = entry.data;
   description={description}
   image={image}
 >
+  <Header />
   <PageHeader title={title} />
   <section class="section-sm">
     <div class="container">

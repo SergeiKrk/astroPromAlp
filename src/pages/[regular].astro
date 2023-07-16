@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
+import Header from "../layouts/partials/Header.astro";
 
 export async function getStaticPaths() {
   const pages = await getSinglePage("pages");
@@ -26,6 +27,7 @@ const { Content } = await page.render();
   description={description}
   image={image}
 >
+  <Header />
   <PageHeader title={title} />
   <section class="section-sm">
     <div class="container">

@@ -1,0 +1,89 @@
+---
+import HeadForm from "../components/HeadForm.astro";
+import { markdownify } from "../../lib/utils/textConverter";
+const { splash } = Astro.props;
+---
+
+{splash.data.enable && (
+  <section class="relative h-full bg-black">
+  <div class="absolute inset-0">
+    <div
+      class="relative h-full overflow-hidden bg-cover bg-center bg-no-repeat blur-sm"
+    >
+      <img
+        src={splash.data.bgImg}
+        width="1920"
+        height="auto"
+        alt={"Промышленный альпинизм и высотные работы"}
+        class="h-full w-full rounded-b-lg"
+      />
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-slate-950/[.75] bg-fixed"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="relative grid h-full place-items-center lg:grid-cols-2">
+    <div
+      class="mx-6 mb-20 mt-6 flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end lg:flex"
+    >
+      <h1>
+        <div class="text-4xl font-extrabold tracking-tighter text-white" set:html={markdownify(splash.data.h1)} />
+      </h1>
+
+      <HeadForm />
+    </div>
+    <div
+      id="astronaut"
+      class="invisible w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start md:visible lg:visible xl:visible 2xl:visible"
+    >
+      <img
+        src={splash.data.astronautImage}
+        width="450"
+        height="auto"
+        alt={splash.data.altAstronaut}
+        class="h-full w-full object-cover"
+      />
+    </div>
+  </div>
+</section>
+)}
+
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translate3d(0, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  #astronaut {
+    animation: float linear 2.5s infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #astronaut {
+      @apply animate-none;
+    }
+
+    :global(#starfield) {
+      @apply hidden;
+    }
+
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
+</style>

@@ -1,8 +1,10 @@
 ---
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
+import Header from "@/partials/Header.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
+import Splash from "@/partials/Splash.astro";
 import Intro from "@/partials/Intro.astro";
 import Services from "./services/index.astro";
 import type { Button, Feature } from "@/types";
@@ -23,14 +25,19 @@ interface Homepage {
 const homepage = await getEntryBySlug("homepage", "index");
 const testimonial = await getEntryBySlug("sections", "testimonial");
 const intro = await getEntryBySlug("sections", "intro");
+const splash = await getEntryBySlug("sections", "splash");
 const call_to_action = await getEntryBySlug("sections", "call-to-action");
 const { banner, features }: Homepage = homepage.data;
 ---
 
 <Base>
-  <Intro intro={intro} />
-  <Services />
-  <Testimonial testimonial={testimonial} />
+  <Header />
+  <Splash splash={splash}/>
+  <div class="space-y-24 px-4 py-32 md:px-8">
+    <Intro intro={intro} />
+    <Services />
+    <Testimonial testimonial={testimonial} />
+  </div>
   <!-- Banner -->
   <section class="section pt-14">
     <div class="container">

@@ -3,6 +3,7 @@ import { Image } from "@astrojs/image/components";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
+import Header from "../layouts/partials/Header.astro";
 
 const entry = await getEntryBySlug("pages", "about");
 const { Content } = await entry.render();
@@ -15,6 +16,7 @@ const { title, description, meta_title, image } = entry.data;
   description={description}
   image={image}
 >
+  <Header />
   <section class="section-sm">
     <div class="container">
       <div class="row justify-center">

@@ -1,0 +1,45 @@
+---
+---
+
+<form>
+  <div class="border-b border-white/10 pb-12">
+    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+      <div class="sm:col-span-2 sm:col-start-1">
+        <label
+          for="Name"
+          class="ml-4 block text-sm font-medium leading-6 text-white">Имя</label
+        >
+        <div class="gradientBgNimb mt-2">
+          <input
+            type="text"
+            name="city"
+            id="city"
+            autocomplete="address-level2"
+            class="block w-full rounded-full border-0 px-4 py-1.5 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+
+      <div class="sm:col-span-2">
+        <label
+          for="Phone"
+          class="ml-4 block text-sm font-medium leading-6 text-white"
+          >Телефон</label
+        >
+        <div class="gradientBgNimb mt-2">
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="+7 999 999 99 99"
+            class="block w-full rounded-full border-0 px-4 py-1.5 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+
+      <div class="sm:col-span-2">
+        <button type="submit" class="gradientBgBtn">Заказать</button>
+      </div>
+    </div>
+  </div>
+</form>
