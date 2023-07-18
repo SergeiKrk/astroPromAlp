@@ -3,7 +3,7 @@ import Logo from "@/components/Logo.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
-import { IoSearch } from "react-icons/io5/index.js";
+import { Icon } from "astro-icon";
 
 export interface ChildNavigationLink {
   name: string;
@@ -22,11 +22,17 @@ const { navigation_button, settings } = config;
 const { pathname } = Astro.url;
 ---
 
-<header id="page-header" class={`header z-30 ${settings.sticky_header && "absolute"}`}>
+<header
+  id="page-header"
+  class={`header z-30 ${
+    settings.sticky_header && "absolute"
+  }`}
+>
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
       <Logo />
+      <div class="text-left ml-4 my-auto inline-block">ПромАльпВысота</div>
     </div>
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
@@ -36,7 +42,7 @@ const { pathname } = Astro.url;
       class="order-3 flex cursor-pointer items-center text-dark dark:text-white lg:order-1 lg:hidden"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Open</title>
+        <title>Открыть меню</title>
         <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
       </svg>
     </label>
@@ -46,7 +52,7 @@ const { pathname } = Astro.url;
       class="order-3 hidden cursor-pointer items-center text-dark dark:text-white lg:order-1"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Close</title>
+        <title>Закрыть меню</title>
         <polygon
           points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
           transform="rotate(45 10 10)"></polygon>
@@ -110,42 +116,26 @@ const { pathname } = Astro.url;
           </>
         ))
       }
-      {
-        navigation_button.enable && (
-          <li class="mt-4 inline-block lg:hidden">
-            <a
-              class="btn btn-outline-primary btn-sm"
-              href={navigation_button.link}
-            >
-              {navigation_button.label}
-            </a>
-          </li>
-        )
-      }
+      <ThemeSwitcher className="mx-5 my-auto" />
     </ul>
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-      {
-        settings.search && (
-          <a
-            class="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
-            href="/search"
-            aria-label="search"
-          >
-            <IoSearch />
-          </a>
-        )
-      }
-      <ThemeSwitcher className="mr-5" />
-      {
-        navigation_button.enable && (
-          <a
-            class="btn btn-outline-primary btn-sm hidden lg:inline-block"
-            href={navigation_button.link}
-          >
-            {navigation_button.label}
-          </a>
-        )
-      }
+      <div class="mr-6 hidden sm:block">
+        <ul class="flex items-center gap-6">
+          <li>
+            <a class="text-sm" href="tel:+79372758313"> +7 937 275 83 13</a>
+          </li>
+          <li>
+            <a href="https://t.me/79372758313">
+              <Icon name="logos:telegram" class="h-10" />
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/79372758313">
+              <Icon name="logos:whatsapp" class="h-10" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
@@ -162,6 +152,6 @@ const { pathname } = Astro.url;
 
 <style>
   .fixed-header {
-    @apply fixed text-dark bottom-auto top-0 bg-body;
+    @apply fixed bottom-auto top-0 bg-body/[.90] text-dark border-b border-slate-200;
   }
 </style>

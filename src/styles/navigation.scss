@@ -12,7 +12,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply bottom-0 w-full text-white dark:text-darkmode-dark items-center justify-between border-b border-transparent py-4 dark:bg-darkmode-body;
+  @apply bottom-0 w-full items-center justify-between border-b border-transparent py-2  bg-darkmode-body/[.30] text-white dark:bg-darkmode-body dark:text-darkmode-dark;
 }
 
 // navbar items
