@@ -26,7 +26,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full motion-safe:scroll-smooth" lang="en">
   <head>
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
@@ -138,11 +138,9 @@ const { title, meta_title, description, image, noindex, canonical } =
     />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body>
+  <body class="h-full overflow-x-hidden" id="main-content">
     <TwSizeIndicator />
-    <main id="main-content">
-      <slot />
-    </main>
+    <slot />
     <Footer />
   </body>
 </html>
