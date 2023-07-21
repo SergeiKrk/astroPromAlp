@@ -1,27 +1,14 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
 import Header from "@/partials/Header.astro";
-import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
 import Splash from "@/partials/Splash.astro";
 import Intro from "@/partials/Intro.astro";
+import Features from "@/partials/Features.astro";
 import Services from "./services/index.astro";
-import type { Button, Feature } from "@/types";
 import { getEntryBySlug } from "astro:content";
-import { FaCheck } from "react-icons/fa/index.js";
 
-interface Homepage {
-  banner: {
-    title: string;
-    content: string;
-    image: string;
-    button: Button;
-  };
-  features: Feature[];
-}
-
-const homepage = await getEntryBySlug("homepage", "index");
+const features = await getEntryBySlug("sections", "features");
 const testimonial = await getEntryBySlug("sections", "testimonial");
 const intro = await getEntryBySlug("sections", "intro");
 const splash = await getEntryBySlug("sections", "splash");
@@ -34,5 +21,6 @@ const splash = await getEntryBySlug("sections", "splash");
     <Intro intro={intro} />
     <Services />
     <Testimonial testimonial={testimonial} />
+    <Features features={features} />
   </div>
 </Base>

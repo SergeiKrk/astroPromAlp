@@ -1,67 +1,57 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
-const { intro } = Astro.props;
+import { Image } from "@astrojs/image/components";
+const { features } = Astro.props;
 ---
 
 {
-  intro.data.enable && (
-    <section
-      id="intro"
-      class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8"
-    >
-      <div class="py-26 relative mx-auto max-w-screen-xl p-4 px-4 sm:px-6 lg:mt-20 lg:px-8">
-        <div class="relative">
-          <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
-            <div class="ml-auto lg:col-start-2 lg:max-w-2xl">
-              <h2
-                set:html={markdownify(intro.data.title)}
-                class="gradientText mb-10 text-5xl font-extrabold tracking-tight"
-              />
-              <p
-                set:html={markdownify(intro.data.subtitle)}
-                class="max-w-xl text-2xl font-extrabold"
-              />
-              <p
-                set:html={markdownify(intro.data.contenet)}
-                class="mt-4 text-lg leading-6 text-gray-500"
-              />
-            </div>
-            <div class="relative-20 relative mt-10 lg:col-start-1 lg:-mx-4 lg:mt-0">
-              <div class="relative space-y-4">
-                <div class="flex items-end justify-center space-x-4 lg:justify-start">
-                  <img
-                    src={intro.data.img1}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt1}
-                    class="w-32 rounded-3xl shadow-lg md:w-56"
+  features.data.enable && (
+    <section id="features" class="section">
+      <div class="container px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div class="row">
+          <div class="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
+            <h2
+              set:html={markdownify(features.data.title)}
+              class="gradientText text-center text-5xl font-extrabold tracking-tight"
+            />
+            <p
+              class="my-8 text-2xl font-extrabold"
+              set:html={markdownify(features.data.subtitle)}
+            />
+          </div>
+          <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+            {features.data.items.map(({ title, description, quantity }) => (
+              <div class="text-center">
+                <div class="mt-2 sm:mt-6">
+                  <p
+                    class="gradientText gradientText mt-2 text-3xl font-bold sm:mt-3 sm:text-6xl"
+                    set:html={markdownify(quantity)}
                   />
-                  <img
-                    src={intro.data.img2}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt2}
-                    class="w-40 rounded-3xl shadow-lg md:w-64"
+                  <p
+                    class="text-sm font-semibold text-gray-800 dark:text-gray-200 sm:text-xl"
+                    set:html={markdownify(title)}
                   />
-                </div>
-                <div class="ml-12 flex items-start justify-center space-x-4 lg:justify-start">
-                  <img
-                    src={intro.data.img3}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt3}
-                    class="w-24 rounded-3xl shadow-lg md:w-40"
-                  />
-                  <img
-                    src={intro.data.img4}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt4}
-                    class="w-32 rounded-3xl shadow-lg md:w-56"
+                  <p
+                    class="text-gray-600 dark:text-gray-400"
+                    set:html={markdownify(description)}
                   />
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+          <div class="mx-auto mt-20 grid max-w-5xl grid-cols-12 items-center gap-x-4 sm:gap-x-6 lg:gap-x-8">
+            {features.data.cases.map(({ image, alt, height, width }) => (
+              <div class="col-span-4 md:col-span-3">
+                <Image
+                  class="w-56 rounded-3xl shadow-lg md:w-56"
+                  src={image}
+                  height={height}
+                  width={width}
+                  fit="contain"
+                  alt={alt}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

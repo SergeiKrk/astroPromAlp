@@ -1,15 +1,23 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "@astrojs/image/components";
+
+interface intro {
+  title: string;
+  subtitle: string;
+  contenet: string;
+  alt1: string;
+  alt2: string;
+  alt3: string;
+  alt4: string;
+}
+
 const { intro } = Astro.props;
 ---
 
 {
   intro.data.enable && (
-    <section
-      id="intro"
-      class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8"
-    >
+    <section id="intro" class="flex flex-col items-center gap-4 space-y-8">
       <div class="py-26 relative mx-auto max-w-screen-xl p-4 px-4 sm:px-6 lg:mt-20 lg:px-8">
         <div class="relative">
           <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">

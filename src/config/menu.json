@@ -5,41 +5,26 @@
       "url": "/"
     },
     {
+      "name": "Услуги",
+      "url": "/#services"
+    },
+    {
+      "name": "Отзывы",
+      "url": "/#testimonials"
+    },
+    {
+      "name": "Преимущества",
+      "url": "/#features"
+    },
+    {
       "name": "О нас",
       "url": "/about"
-    },
-    {
-      "name": "Элементы",
-      "url": "/elements"
-    },
-    {
-      "name": "Услуги",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Contact",
-          "url": "/contact"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Search",
-          "url": "/search"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
-        }
-      ]
     }
   ],
   "footer": [
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Услуги",
+      "url": "/#services"
     },
     {
       "name": "Политика конфиденциальности",
