@@ -1,5 +1,6 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "@astrojs/image/components";
 const { intro } = Astro.props;
 ---
 
@@ -29,35 +30,39 @@ const { intro } = Astro.props;
             <div class="relative-20 relative mt-10 lg:col-start-1 lg:-mx-4 lg:mt-0">
               <div class="relative space-y-4">
                 <div class="flex items-end justify-center space-x-4 lg:justify-start">
-                  <img
-                    src={intro.data.img1}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt1}
+                  <Image
                     class="w-32 rounded-3xl shadow-lg md:w-56"
+                    src={intro.data.img1}
+                    height={168}
+                    width={224}
+                    fit="contain"
+                    alt={intro.data.alt1}
                   />
-                  <img
-                    src={intro.data.img2}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt2}
+                  <Image
                     class="w-40 rounded-3xl shadow-lg md:w-64"
+                    src={intro.data.img2}
+                    height={192}
+                    width={256}
+                    fit="contain"
+                    alt={intro.data.alt2}
                   />
                 </div>
                 <div class="ml-12 flex items-start justify-center space-x-4 lg:justify-start">
-                  <img
-                    src={intro.data.img3}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt3}
+                  <Image
                     class="w-24 rounded-3xl shadow-lg md:w-40"
+                    src={intro.data.img3}
+                    height={266}
+                    width={160}
+                    fit="contain"
+                    alt={intro.data.alt3}
                   />
-                  <img
-                    src={intro.data.img4}
-                    width="400"
-                    height="auto"
-                    alt={intro.data.alt4}
+                  <Image
                     class="w-32 rounded-3xl shadow-lg md:w-56"
+                    src={intro.data.img4}
+                    height={168}
+                    width={224}
+                    fit="contain"
+                    alt={intro.data.alt4}
                   />
                 </div>
               </div>
