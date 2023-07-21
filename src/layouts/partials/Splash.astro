@@ -1,7 +1,6 @@
 ---
 import HeadForm from "../components/HeadForm.astro";
 import { markdownify } from "../../lib/utils/textConverter";
-import { Image } from "@astrojs/image/components";
 const { splash } = Astro.props;
 ---
 
@@ -35,7 +34,7 @@ const { splash } = Astro.props;
           id="astronaut"
           class="-mt-[140px] w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start md:collapse lg:visible lg:mt-0 xl:visible xl:mt-0 2xl:visible 2xl:mt-0"
         >
-          <Image
+          <img
             src={splash.data.astronautImage}
             height={998}
             width={768}
